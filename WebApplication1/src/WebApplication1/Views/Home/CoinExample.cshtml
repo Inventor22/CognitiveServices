@@ -1,0 +1,32 @@
+﻿
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="CoinExample" enctype="multipart/form-data">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    <label for="file">Image</label>
+                    <input type="file" name="file" id="file" class="form-control">
+                    <p class="help-block">Must be JPEG/PNG/GIF/BMP, up to 4mb and greater than 50x50px</p>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Upload" class="btn btn-primary" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <h4>Thumbnail Image</h4>
+        <p>@ViewData["txt"]</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <h4>Original Image</h4>
+        <img src="@ViewData["originalImage"]" />
+    </div>
+</div>
+
